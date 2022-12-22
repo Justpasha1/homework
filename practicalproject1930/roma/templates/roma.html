@@ -1,0 +1,20 @@
+{% extends 'practicalapp/base.html' %} 
+{% block content %}
+<table>
+    <tr>
+        <th>Номер</th>
+        <th>Мова</th>
+        <th>Рейтинг</th>
+        <th>Зміни</th>
+    </tr>
+    {% for obj in list %}
+        <tr>
+            <td>{{ obj.pk }}</td>
+            <td>{{ obj.name }}</td>
+            <td>{{ obj.ratings }}</td>
+            <td>{{ obj.change }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

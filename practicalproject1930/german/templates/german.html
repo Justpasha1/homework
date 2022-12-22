@@ -1,0 +1,22 @@
+
+{% extends "practicalapp/base.html" %}
+{% block content %}
+<table>
+<tr>
+    <th>Номер</th>
+    <th>Язык</th>
+    <th>Рейтинг</th>
+    <th>Изменение</th>
+</tr>
+
+
+    {% for language in programming_language %}
+    <tr>
+        <th>{{language.pk}}</th>
+        <th>{{language.name}}</th>
+        <td>{{language.rating}}</td>
+        <td>{{language.change}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

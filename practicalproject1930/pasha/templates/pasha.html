@@ -1,0 +1,45 @@
+{% extends "practicalapp/base.html" %}
+{% load static %}
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'pashok.css'  %}">
+{% endblock %}
+
+{% block content %}
+<table class="bodymain" cellspacing="0">
+    <tr>
+        <th>Номер</th>
+        <th>Назва</th>
+        <th>Рейтинг</th>
+        <th>Зміни</th>
+    </tr>
+    {% for language in language %}
+    <tr>
+        <td class="first_line">{{language.pk}}</td>
+        <td>{{language.name}}</td>
+        <td>{{language.ratings}}</td>
+        <td>{{language.change}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
+{% comment %} 
+#         .---.
+#        |   '.|  __
+#        | ___.--'  )
+#      _.-'_` _%%%_/
+#   .-'%%% a: a %%%
+#       %%  L   %%_
+#       _%\'-' |  /-.__
+#    .-' / )--' #/     '\
+#   /'  /  /---'(    :   \
+#  /   |  /( /|##|  \     |
+# /   ||# | / | /|   \    \
+# |   ||##| I \/ |   |   _|
+# |   ||: | o  |#|   |  / |
+# |   ||  / I  |:/  /   |/
+# |   ||  | o   /  /    /
+# |   \|  | I  |. /    /
+#  \  /|##| o  |.|    /
+#   \/ \::|/\_ /  ---'|
+{% endcomment %}

@@ -1,0 +1,20 @@
+{% extends 'practicalapp\base.html' %}
+
+{% block content %}
+    <table>
+        <tr>
+            <td>Номер</td>
+            <td>Назва</td>
+            <td>Рейтинг</td>
+            <td>Зміни</td>
+        </tr>
+        {% for ratings_language in ratings_language %}
+            <tr>
+                <td>ratings_language.pk</td>
+                <td>ratings_language.name</td>
+                <td>ratings_language.ratings</td>
+                <td>ratings_language.change</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "practicalapp/base.html" %}
+{% block content %}
+<table>
+    <tr>
+        <td>Number</td>
+        <td>name</td>
+        <td>rating</td>
+        <td>change</td>
+    </tr>
+    {% for language in language %}
+    <tr>
+        <td>{{language.pk}}</td>
+        <td>{{language.name}}</td>
+        <td>{{language.ratings}}</td>
+        <td>{{language.change}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
+
+
+
+
+

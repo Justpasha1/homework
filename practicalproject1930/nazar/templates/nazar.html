@@ -1,0 +1,19 @@
+{% extends 'practicalapp/base.html' %}
+{% block content %}
+    <table>
+        <tr>
+            <td><b>Number</b></td>
+            <td><b>Name</b></td>
+            <td><b>Rating</b></td>
+            <td><b>Change</b></td>
+        </tr> 
+        {% for obj in program %}
+            <tr>
+                <td>{{obj.pk}}</td>
+                <td>{{obj.name}}</td>
+                <td>{{obj.ratings}}</td>
+                <td>{{obj.change}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

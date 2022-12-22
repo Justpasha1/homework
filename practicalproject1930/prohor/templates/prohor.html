@@ -1,0 +1,22 @@
+{% extends "practicalapp/base.html" %}
+{% bloсk content%}
+<table>
+    <tr>
+
+        <th> номер (</th>
+        <th> язык </th>
+        <th> рейтинг 3(</th>
+        <th> тут забыл </th>
+    <tr>    
+    {% for obj in list %}
+    <tr>
+        <td>{{ obj.qk}}<td>
+        <td>{{ obj.name}}<td>
+        <td>{{ obj.ratings}}<td>
+        <td>{{ obj.change}}<td>
+    <tr>
+    {% endfor %}
+</table>
+{% onblock%}
+
+

@@ -1,0 +1,21 @@
+{% extends "practicalapp/base.html" %}
+{% load static%}
+
+{% block links %}
+<table>
+    <tr>
+        <th>Номер</th>
+        <th>Назва</th>
+        <th>рейтин</th>
+        <th>результат</th>
+    </tr>
+    {% for language in languages%}
+    <tr>
+        <td>{{ language.pk }}</td>
+        <td>{{ language.name }}</td>
+        <td>{{ language.ratings }}</td>
+        <td>{{ language.change }}</td>
+    </tr>
+    {% endfor %}    
+</table>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'practicalapp/base.html' %} {% comment %} Подключаем файл main.html {% endcomment %}
+
+{% load static %} {% comment %} Подключаем static {% endcomment %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}"> {% comment %} Подключаем css {% endcomment %}
+{% endblock %}
+
+{% block content %}
+
+<table>
+    <tr>
+        <th>Number</th>
+        <th>Language</th>
+        <th>Rating</th>
+        <th>Change</th>
+    </tr>
+
+    {% for lan in list_lan %}
+
+    <tr>
+        <th>{{lan.pk}}</th>
+        <th>{{lan.name}}</th>
+        <td>{{lan.ratings}}</td>
+        <td>{{lan.change}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
